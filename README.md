@@ -6,11 +6,15 @@ The structure designed to send 2 messages every 5 seconds. After a message is se
 The sending process will return a message ID. During message listing, these IDs are expected to be returned as a JSON response.
 
 Requirements
-●  used
+
 ● Service Layer with Repository Pattern used
+
 ● Queue, Job/Worker used
+
 ● Laravel Command used to send message
+
 ● Redis cache implemented
+
 ● Complied with RESTful API standards
 
 ## Getting Started
