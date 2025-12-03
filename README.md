@@ -1,6 +1,17 @@
-# Laravel Project
+# About Project
 
-This is a Laravel application, powered by Laravel Sail for a seamless local development experience using Docker.
+We are seeking the design of an automatic message-sending system for this project.
+
+The structure designed to send 2 messages every 5 seconds. After a message is sent, the sent status should be marked in the database.
+The sending process will return a message ID. During message listing, these IDs are expected to be returned as a JSON response.
+
+Requirements
+●  used
+● Service Layer with Repository Pattern used
+● Queue, Job/Worker used
+● Laravel Command used to send message
+● Redis cache implemented
+● Complied with RESTful API standards
 
 ## Getting Started
 
