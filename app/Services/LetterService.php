@@ -6,9 +6,6 @@ use common\models\Letter;
 use frontend\components\Constant;
 use frontend\repositories\FileRepository;
 use frontend\repositories\LetterRepository;
-use Yii;
-use yii\helpers\Url;
-use yii\web\UploadedFile;
 
 class LetterService
 {
@@ -33,8 +30,7 @@ class LetterService
                 'link' =>  Url::base(scheme: true) . '/letter/view?uuid=' . $letter->uuid,
                 'text' => $letter->description
             ];
-            $notificationService = new NotificationService();
-            $notificationService->createNotification($notificationData, $data[$letter->formName()]['notification_receiver']);
+            $repository->createNotification($notificationData, $data[$letter->formName()]['notification_receiver']);
         }
    
         return $letter;
